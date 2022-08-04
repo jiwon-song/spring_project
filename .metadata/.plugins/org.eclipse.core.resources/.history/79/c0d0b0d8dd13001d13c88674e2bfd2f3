@@ -27,7 +27,7 @@
 					<div class="card">
 						<div class="card-body">
 							<table id="datatablesSimple">
-								<!--  이거때문에 자동 페이징처리? --><!-- 깃허브 수정해보려고 걍 쓴 주석 -->
+								<!--  이거때문에 자동 페이징처리? -->
 								<thead>
 									<tr>
 										<th>학생이름</th>
