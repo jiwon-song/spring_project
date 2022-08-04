@@ -1,0 +1,21 @@
+package com.hanul.project;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HongController {
+
+	@RequestMapping("test_list.ho")
+	public String test() {
+		public String test(Model model, int class_id) {
+		// 사이드 메뉴에 붙일 클래스 목록
+				List<ClassListVO> list = null;
+				list = service.class_list();
+				model.addAttribute("list", list);
+		return "hong/test_list";	
+	}
+	
+	
+	
+}

@@ -1,0 +1,8 @@
+package hong;
+
+public class ClassListVO {
+	
+	private String class_name;
+	private int class_id;
+
+}

@@ -1,0 +1,25 @@
+package song;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import hong.ClassListVO;
+
+
+@Service
+public class SongService{
+	
+	@Autowired private SongDAO dao;
+	
+	public List<StudentListVO> student_detail(int class_id){
+		return dao.student_detail(class_id);
+	}
+	
+	public List<ClassListVO> class_list(){
+		return dao.class_list();
+	}
+
+
+}

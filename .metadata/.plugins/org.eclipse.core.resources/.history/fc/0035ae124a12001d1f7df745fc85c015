@@ -1,0 +1,27 @@
+package com.hanul.project;
+
+import java.util.List;
+import java.util.Locale;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import hong.ClassListVO;
+import song.SongService;
+
+@Controller
+public class SongController {
+	
+	@RequestMapping("class_list.so")
+	public String list(HttpSession session, Model model) {
+		
+		List<ClassListVO> list = service.class_list();
+		 
+		 model.addAttribute("list", list);
+		return "song/class_list";
+	}
+
+}

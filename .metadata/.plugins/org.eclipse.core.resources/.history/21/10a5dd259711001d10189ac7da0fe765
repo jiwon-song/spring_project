@@ -1,0 +1,16 @@
+package hong;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class HongService {
+	
+	@Autowired private HongDAO dao;
+	
+	public void class_list() {
+		
+	}
+
+	
+	
+
+}

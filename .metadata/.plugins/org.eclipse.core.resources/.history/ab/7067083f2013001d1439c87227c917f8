@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="song.mapper">
+
+<!-- 학생 상세목록 -->
+<select id="studentdetail" resultType="song.StudentListVO">
+select student_name, student_id, 
+		student_pw, grade, 
+		school_id, parent_phone, 
+		student_phone, class_id
+from student
+where class_id=#{class_id}
+</select>
+
+<!-- 반 목록 -->
+<select id = "classlist" resultType="hong.ClassListVO">
+select *
+from class
+order by class_id
+</select>
+</mapper>

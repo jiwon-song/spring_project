@@ -1,0 +1,36 @@
+package com.hanul.project;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import hong.ClassListVO;
+import hong.HongService;
+
+/**
+ * Handles requests for the application home page.
+ */
+@Controller
+public class HomeController {
+	@Autowired private HongService service;	// 이 부분은 일우꺼로 수정할 것
+	
+	// 회원가입페이지 연결 
+	@RequestMapping("new.t")
+	public String teacher() {
+		return "new";
+	}
+	
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+
+	
+}

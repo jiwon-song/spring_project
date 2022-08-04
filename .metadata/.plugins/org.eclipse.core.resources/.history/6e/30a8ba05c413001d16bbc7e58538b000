@@ -1,0 +1,50 @@
+package com.hanul.project;
+
+import java.util.List;
+import java.util.Locale;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import hong.ClassListVO;
+import song.ClassVO;
+import song.SongService;
+import song.StudentListVO;
+
+@Controller
+public class SongController {
+	@Autowired private SongService service;
+	
+	@RequestMapping("student_list.so")
+	public String student_list(Model model, int class_id, String dis) {
+		// 사이드 메뉴에 붙일 클래스 목록
+
+		List<ClassVO> list = service.class_list();
+		 
+		model.addAttribute("list", list);
+		model.addAttribute("dis", dis);
+		
+		//학생리스트
+		List<StudentListVO> student_list = null;
+		student_list = service.student_list(class_id);
+		model.addAttribute("student_list", student_list);
+		
+		return "song/student_detail";
+	}
+	
+	//반목록 화면 요청
+	@RequestMapping("class_list.so")
+	public String list(Locale locale, Model model) {
+		
+		List<ClassVO> list = service.class_list();
+		 
+		model.addAttribute("list", list);
+		
+		
+		return "song/class_list";
+	}
+
+}

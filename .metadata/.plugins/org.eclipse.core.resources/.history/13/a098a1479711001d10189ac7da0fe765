@@ -1,0 +1,11 @@
+package hong;
+
+import java.util.List;
+
+public class HongDAO {
+
+	public List<ClassListVO> class_list() {
+		return null;
+	}
+
+}

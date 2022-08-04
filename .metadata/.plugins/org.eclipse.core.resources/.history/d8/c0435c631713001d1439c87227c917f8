@@ -1,0 +1,10 @@
+package song;
+
+public class StudentListVO {
+	private String student_name, shcool_id;
+	private int grade;
+	private String parent_phone, student_phone;
+	private int class_id;
+	
+	
+}
