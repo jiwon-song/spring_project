@@ -24,6 +24,7 @@
 			<main>
 				<div class="container-fluid px-4">
 					<h1 class="mt-4">${class_name} - ${stu_de.student_name}</h1>
+					<h3>학생정보</h3>
 					<div class="card">
 						<div class="card-body">
 							<table id="datatablesSimple">
@@ -50,6 +51,47 @@
 											<td>${stu_de.parent_phone}</td>
 											<td>${stu_de.student_phone}</td>
 											<td>${stu_de.class_id}</td>
+										</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid px-4">
+					<h3>과제결과</h3>
+					<div class="card">
+						<div class="card-body">
+							<table id="datatablesSimple2">
+								<!--  이거때문에 자동 페이징처리? --><!-- 깃허브 수정해보려고 걍 쓴 주석 -->
+								<thead>
+									<tr>
+										<th>과제명</th>
+										<th>제출날짜</th>
+										<th>제출여부</th>
+										<th>점수</th>
+										<th  class='col-2'>수정/삭제</th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr>
+											<td>${hw_de.homework_name}</td>
+											<td>${hw_de.homework_sub_date}</td>
+											<td>
+												<c:if test='${hw_de.homework_score != null}'>제출</c:if> 
+												<c:if test='${hw_de.homework_score == null}'>미제출</c:if> 										
+											</td>
+											<td>${hw_de.homework_score}</td>
+											<td>
+												<form class="col-6 d-inline-block" action="homework_modify.ho" method="post">
+													
+													<input type="hidden" name='class_name' value='${class_name}' />
+													<button type="submit" class="btn btn-primary col-10">수정</button>
+												</form>
+												<form class="col-5 d-inline-block" action="test_delete.ho" method="post">
+													<button class="btn btn-danger col-12" onclick="if(confirm('${stu_de.student_name} 의 ${hw_de.homework_name}를 삭제하시겠습니까?')){type='submit'}else{type='button'} ">삭제</button>
+												</form>
+										
+											</td>
 										</tr>
 								</tbody>
 							</table>

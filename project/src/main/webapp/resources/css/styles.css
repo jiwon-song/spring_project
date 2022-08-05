@@ -11718,7 +11718,11 @@ body {
 	vertical-align: middle;
 	height: 56px;
 }
-
+/* 수직 가운데 정렬 */
+.hong_vam{
+	vertical-align: middle;
+	margin: 0;
+}
 /* 11111111111111111111111111111111111111 */
 /*-------------------- dddddsfesdsfdsaddddddddddddddwwwwwwwwd sdfafaaa------------------------------*/
 

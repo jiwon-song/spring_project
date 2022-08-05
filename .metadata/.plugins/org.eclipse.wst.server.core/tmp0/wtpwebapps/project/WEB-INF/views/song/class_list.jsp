@@ -26,11 +26,6 @@
 					<h1 class="mt-4">반 목록</h1>
 					<div class="card">
 						<div class="card-body">
-							<div class="row justify-content-end">
-								<a class="btn btn-modify mb-4 col-1 me-sm-3" href="modify.so?id=${vo.id}">수정</a>
-								<a class="btn btn-delete mb-4 col-1 me-sm-3" 
-									onclick="if(confirm('정말 삭제하시겠습니가?')) href='delete.so?id=${vo.id}'">삭제</a>
-							</div>
 							<table id="datatablesSimple">
 								<!--  이거때문에 자동 페이징처리? -->
 								<thead>

@@ -19,6 +19,7 @@ select c.class_name, nvl(count(s.class_id), 0) stu_num, c.class_id
 from class c, student s
 where c.class_id= s.class_id(+)
 group by c.class_name, c.class_id
+order by c.class_id
 </select>
 
 <!-- 학생 상세 정보 가져오기 -->
@@ -31,4 +32,14 @@ from student s, school h
 where s.school_id=h.school_id
 and s.student_id=#{student_id}
 </select>
+
+<!-- 학생한명 과제결과 -->
+<select id="stuhwdetail" resultType="song.SongHomeworkVO">
+select c.homework_name, h.homework_sub_date, h.homework_score
+from homework h, homeworkc c
+where h.homework_id = c.homework_id
+and student_id =#{student_id}
+</select>
+
+
 </mapper>

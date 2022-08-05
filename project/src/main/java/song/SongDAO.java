@@ -23,4 +23,10 @@ public class SongDAO {
 	public StudentListVO stu_detail(String student_id) {
 		return sql.selectOne("song.mapper.studetail", student_id);
 	}
+
+	public SongHomeworkVO stu_hw_detail(String student_id) {
+		return sql.selectOne("song.mapper.stuhwdetail", student_id);
+	}
+	
+	
 }

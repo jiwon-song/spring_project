@@ -40,4 +40,8 @@ public class HongDAO {
 		
 	}
 
+	public List<TestDetailVO> test_detail(int test_id) {
+		return sql.selectList("hong.mapper.testdetail", test_id);		
+	}
+
 }

@@ -11,36 +11,38 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import hong.ClassListVO;
 import hong.HongService;
+import hong.TestDetailVO;
 import hong.TestVO;
 
 @Controller
 public class HongController {
 	
 	@Autowired private HongService service;	
-	private String teacher_id = "t1";	
+	private String teacher_id = "admin";	
 	
 	// 홈화면 연결
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
+				
 		// 사이드메뉴에 반목록 가져오기
 		List<ClassListVO> list = null;	
 		list = service.class_list(teacher_id);
 		model.addAttribute("list", list);
-		
-		
+		model.addAttribute("teacher_id", teacher_id);		
 		return "index";
 	}
 	
 	
 	// 반별 테스트 목록 가죠오기
 	@RequestMapping("test_list.ho")
-	public String test_list(Model model, int class_id, String class_name) {
+	public String test_list(Model model, int class_id, String class_name, String dis) {
 					
 		// 사이드 메뉴에 붙일 클래스 목록
 		List<ClassListVO> list = null;
 		list = service.class_list(teacher_id);
 		model.addAttribute("list", list);
+		model.addAttribute("dis", dis);
 
 		// 클래스 이름 뜨게 하기
 		model.addAttribute("class_id", class_id);	// 클래스 이름 가져오게 수정할 것
@@ -54,8 +56,6 @@ public class HongController {
 		
 		//선택한 반 이름 뜨게 하기
 		
-		
-		
 		return "hong/test_list";	
 	}
 	
@@ -66,9 +66,7 @@ public class HongController {
 		//vo 에 저장되어 있으므로 사용하기만 하면 됨 			
 		// 테스트 추가하는 메소드 
 		service.test_insert(vo);
-		
-		//선택한 반 이름 뜨게 하기
-		
+
 		
 		return "redirect:test_list.ho?class_id="+vo.getClass_id();	
 	}
@@ -103,9 +101,7 @@ public class HongController {
 		List<TestVO> test_list = null;
 		test_list = service.test_list(class_id, teacher_id);
 		
-		
 		model.addAttribute("test_list", test_list);
-		
 		
 		return "hong/test_modify";
 	}
@@ -126,6 +122,35 @@ public class HongController {
 	
 		return "redirect:test_list.ho?class_id="+class_id;
 	}
+	
+	
+	
+	
+	// 테스트 상세 화면 불러오기 ////////////////////////////////////////////////////////////////////////////////////
+	@RequestMapping("test_detail.ho")
+	public String test_detail(Model model, int test_id, String test_name, String class_name) {
+		
+		// 사이드 메뉴에 붙일 클래스 목록
+		List<ClassListVO> list = null;
+		list = service.class_list(teacher_id);
+		model.addAttribute("list", list);	
+
+		
+		model.addAttribute("test_name", test_name);	
+		model.addAttribute("class_name", class_name);	
+		
+		List<TestDetailVO> test_detail_list = null; 		
+		
+		test_detail_list = service.test_detail(test_id);
+		model.addAttribute("test_detail_list", test_detail_list);	
+		System.out.println(test_detail_list.size());
+		
+		return "hong/test_detail";
+	}
+	
+	
+	
+	
 	
 	
 	

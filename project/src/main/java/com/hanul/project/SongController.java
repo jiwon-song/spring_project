@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import song.ClassVO;
+import song.SongHomeworkVO;
 import song.SongService;
 import song.StudentListVO;
 
@@ -25,13 +26,18 @@ public class SongController {
 		 
 		model.addAttribute("list", list);
 		model.addAttribute("dis", dis);
-		
+				
 		//학생리스트
 		StudentListVO stu_de = service.stu_detail(student_id);
 		
-		
 		model.addAttribute("class_name", class_name);
 		model.addAttribute("stu_de", stu_de);
+		
+		
+		//과제리스트
+		SongHomeworkVO hw_de = service.stu_hw_detail(student_id);
+		model.addAttribute("hw_de", hw_de);
+		
 		
 		return "song/student_detail";
 	}

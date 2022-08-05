@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="song.mapper">
+
+<!-- 학생 상세목록 -->
+<select id="studentlist" resultType="song.StudentListVO">
+select s.student_name, s.student_id, 
+		s.student_pw, s.grade, 
+		h.school_name,s.parent_phone, 
+		nvl(s.student_phone, '없음') student_phone, s.class_id
+from student s, school h
+where s.school_id=h.school_id
+and s.class_id=#{class_id}
+</select>
+
+<!-- 반 목록 -->
+<select id = "classlist" resultType="song.ClassVO">
+select c.class_name, nvl(count(s.class_id), 0) stu_num, c.class_id  
+from class c, student s
+where c.class_id= s.class_id(+)
+group by c.class_name, c.class_id
+order by c.class_id
+</select>
+
+<!-- 학생 상세 정보 가져오기 -->
+<select id = "studetail" resultType="song.StudentListVO">
+select s.student_name, s.student_id, 
+		s.student_pw, s.grade, 
+		h.school_name,s.parent_phone, 
+		nvl(s.student_phone, '없음') student_phone, s.class_id
+from student s, school h
+where s.school_id=h.school_id
+and s.student_id=#{student_id}
+</select>
+</mapper>

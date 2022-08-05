@@ -77,7 +77,7 @@
 									<c:forEach items="${test_list}" var="test">
 									<tr  class="hong_vam">
 <%--								<tr data-test='${test.test_id}'>  <!-- form 이 아니라 자바 스크립트로 데이터 보내줄 때 이렇게 데이터 넣어줌 --> --%>
-										<td>${test.test_name }</td>
+										<td><a href="test_detail.ho?test_id=${test.test_id}&test_name=${test.test_name}&class_name=${class_name}" class="text-decoration-none text-reset">${test.test_name}</a></td>
 										<td>${test.class_name}</td>
 										<td>${test.count} / ${test.total}</td> 
 										<td>${test.test_date}</td>

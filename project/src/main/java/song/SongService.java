@@ -23,6 +23,10 @@ public class SongService{
 	public StudentListVO stu_detail(String student_id) {
 		return dao.stu_detail(student_id);
 	}
+	
+	public SongHomeworkVO stu_hw_detail(String student_id) {
+		return dao.stu_hw_detail(student_id);
+	}
 
 
 }

@@ -35,6 +35,10 @@ public class HongService {
 		dao.test_update(vo);
 	}
 
+	public List<TestDetailVO> test_detail(int test_id) {
+		return dao.test_detail(test_id);
+	}
+
 	
 	
 
