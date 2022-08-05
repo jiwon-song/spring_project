@@ -9252,3 +9252,54 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-08-05 12:50:43.398
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-08-05 12:50:43.408
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:47.566
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:47.566
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3b127612[org.springframework.tooling.boot.ls:1.33.0.202204250653(id=569)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:47.568
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:47.708
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:50.828
+!MESSAGE Boot LS startup time from start to initialized: 3253ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.283
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TFFCmnjvisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.285
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.287
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.288
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.288
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.288
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TFFCmnjv => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.292
+!MESSAGE classpath=50 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.294
+!MESSAGE buffering callback sts4.classpath.TFFCmnjv project false 50
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.294
+!MESSAGE executing callback sts4.classpath.TFFCmnjv 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-05 12:50:51.586
+!MESSAGE executing callback sts4.classpath.TFFCmnjv SUCCESS [done]
