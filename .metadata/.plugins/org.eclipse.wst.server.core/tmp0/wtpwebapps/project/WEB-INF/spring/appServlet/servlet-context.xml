@@ -23,7 +23,7 @@
 	<!--  js 연결하기 위해 추가 -->
 	<resources location="/resources/js/" mapping="/js/**"  />
 	<!--  images 폴더를 img로 연결하기 위해 추가해줌 -->
-	<resources location = "/resources/images/" mapping="/img/**"/>
+	<resources location = "/resources/assets/img/" mapping="/img/**"/>
 	
 	
 	<!-- 	화면연결을 tiles 레이아웃으로 하자 tiles / config.xml 에 설정을 넣어놓음 -->

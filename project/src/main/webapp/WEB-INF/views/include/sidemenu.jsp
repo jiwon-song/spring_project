@@ -9,7 +9,7 @@
 						
 						<a class="nav-link" href="<c:url value='/'/>">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-tachometer-alt"></i>
+								<i class="fs-5 fa-brands fa-fort-awesome"></i>
 							</div> 홈화면
 						</a>
 												
@@ -20,14 +20,14 @@
 						
 						<a class="nav-link collapsed" href="class_list.so">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-columns"></i>
+								<i class="fs-5 fa-solid fa-chess-rook"></i>
 							</div> 반 관리
 						</a> 
 						<a class="nav-link collapsed"  href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseLayouts1" aria-expanded="false"
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-book-open"></i>
+								<i class="fs-5 fa-regular fa-chess-pawn"></i>
 							</div> 학생관리
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
@@ -52,7 +52,7 @@
 							data-bs-target="#collapseLayouts2" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-columns"></i>
+								<i class="fs-5 fa-solid fa-chess-knight"></i>
 							</div> 과제관리
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
@@ -71,7 +71,7 @@
 							data-bs-target="#collapseLayouts3" aria-expanded="false"
 							aria-controls="collapseLayouts">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-columns"></i>
+								<i class="fs-5 fa-regular fa-chess-bishop"></i>
 							</div> 테스트 관리
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
@@ -97,7 +97,7 @@
 							data-bs-target="#collapseLayouts4" aria-expanded="false"
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-book-open"></i>
+								<i class="fs-5 fa-solid fa-chess-board"></i>
 							</div> 학생 출석 관리
 							<div class="sb-sidenav-collapse-arrow">
 								<i class="fas fa-angle-down"></i>
@@ -118,10 +118,8 @@
 							aria-expanded="false"
 							aria-controls="collapsePages">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-book-open"></i>
+								<i class="fs-5 fa-regular fa-chess-queen"></i>
 							</div> 선생님 일정
-							
-							<!-- ㄴㅇㄻㅇㄹㄻㄴㅇㄹ -->
 
 						</a>
 
